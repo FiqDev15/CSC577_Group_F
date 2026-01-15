@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    <!-- Application Display Name -->
+    <display-name>EduSummarize</display-name>
+    
+    <!-- Welcome File List -->
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- Session Configuration -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    
+    <!-- Servlet Definitions -->
+    <servlet>
+        <servlet-name>SummarizeServlet</servlet-name>
+        <servlet-class>com.edusummarize.servlets.SummarizeServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.edusummarize.servlets.LoginServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.edusummarize.servlets.RegisterServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.edusummarize.servlets.LogoutServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>SubscribeServlet</servlet-name>
+        <servlet-class>com.edusummarize.servlets.SubscribeServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>com.edusummarize.servlets.AdminServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>MySummariesServlet</servlet-name>
+        <servlet-class>com.edusummarize.servlets.MySummariesServlet</servlet-class>
+    </servlet>
+    
+    <!-- Servlet Mappings -->
+    <servlet-mapping>
+        <servlet-name>SummarizeServlet</servlet-name>
+        <url-pattern>/SummarizeServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>SubscribeServlet</servlet-name>
+        <url-pattern>/SubscribeServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/AdminServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>MySummariesServlet</servlet-name>
+        <url-pattern>/MySummariesServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Error Pages -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+    
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+    
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+    
+    <!-- MIME Type Mappings -->
+    <mime-mapping>
+        <extension>pdf</extension>
+        <mime-type>application/pdf</mime-type>
+    </mime-mapping>
+    
+    <mime-mapping>
+        <extension>txt</extension>
+        <mime-type>text/plain</mime-type>
+    </mime-mapping>
+    
+</web-app>
